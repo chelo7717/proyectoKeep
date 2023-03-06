@@ -1,5 +1,9 @@
-function sumar(a, b) {
-  return a + b;
+class Keep{
+  sumar(a,b){
+    return 2;
+  }
+  multiplicar(d,e){
+    this.sumar()
+  }
 }
-
-export default sumar;
+export default Keep;
