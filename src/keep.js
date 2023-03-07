@@ -25,14 +25,13 @@ export class Nota
 
 export class ListadeNotas
 {
-  constructor()
+  constructor(notas)
   {
-    const notas = new Array();
+    this.notas=notas;
   }
   agregarNota(nota)
   {
     this.notas.push(nota);
-    return notas;
   }
   editarNota(titulo,desc, nota)
   {
@@ -41,7 +40,7 @@ export class ListadeNotas
   }
   EliminarNota(nota)
   {
-    nostas.splice()
+    this.nostas.splice()
   }
 };
 export default Nota; ListadeNotas;

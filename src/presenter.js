@@ -1,5 +1,5 @@
 import {Nota} from './keep.js';
-//import {ListadeNotas} from './keep.js';
+import {ListadeNotas} from './keep.js';
 
 const title = document.querySelector("#titulo");
 const description = document.querySelector("#descripcion");
@@ -12,12 +12,11 @@ form.addEventListener("submit", (event) => {
   const titulo=title.value;
   const descripcion=description.value;
   const nota = new Nota(titulo,descripcion);
-  nota.Titulo=titulo;
-  nota.Descripcion=descripcion;
+  var notas = new ListadeNotas(new Array());
   event.preventDefault();
-  // const notas = new ListadeNotas();
-  // notas.agregarNota(nota);
-  // console.log(nota);
+  notas.agregarNota(nota);
+  console.log(nota);
+  console.log(notas);
   //div.innerHTML=nota;
-  div.innerHTML = "NOTA" + "<br>" + "<p>" + "TITULO: " + nota.Titulo + "<br>" + "DESCRIPCION: " + nota.Descripcion;
+  div.innerHTML = "NOTA" + "<br>" + "<p>" + "TITULO: " + nota._Titulo + "<br>" + "DESCRIPCION: " + nota._Descripcion;
 });
