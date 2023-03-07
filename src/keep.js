@@ -1,9 +1,47 @@
-class Keep{
-  sumar(a,b){
-    return 2;
+export class Nota
+{
+  constructor(Titulo,Descripcion)
+  {
+    this._Titulo=Titulo;
+    this._Descripcion=Descripcion;
   }
-  multiplicar(d,e){
-    this.sumar()
+  get titulo()
+  {
+    return this._Titulo;
   }
-}
-export default Keep;
+  get descripcion()
+  {
+    return this._Descripcion
+  }
+  set titulo(t)
+  {
+    this._Titulo=t;
+  }
+  set descripcion(d)
+  {
+    this._Descripcion=d;
+  }
+};
+
+export class ListadeNotas
+{
+  constructor()
+  {
+    const notas = new Array();
+  }
+  agregarNota(nota)
+  {
+    this.notas.push(nota);
+    return notas;
+  }
+  editarNota(titulo,desc, nota)
+  {
+    nota.Titulo=titulo;
+    nota.Descripcion=desc;
+  }
+  EliminarNota(nota)
+  {
+    nostas.splice()
+  }
+};
+export default Nota; ListadeNotas;

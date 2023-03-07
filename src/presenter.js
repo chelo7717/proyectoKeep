@@ -1,4 +1,5 @@
-//import keep from "./sumador";
+import {Nota} from './keep.js';
+//import {ListadeNotas} from './keep.js';
 
 const title = document.querySelector("#titulo");
 const description = document.querySelector("#descripcion");
@@ -8,12 +9,15 @@ const div = document.querySelector("#resultado-div");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  /*const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-  const keep= new Keep()*/
-  const titleKeep = title.value;
-  const descriptionKeep = description.value;
-
-  //div.innerHTML = "<p>" + keep.sumar(firstNumber, secondNumber) + "</p>";
-  div.innerHTML = "NOTA" + "<br>" + "<p>" + "TITULO: " + titleKeep + "<br>" + "DESCRIPCION: " + descriptionKeep;
+  const titulo=title.value;
+  const descripcion=description.value;
+  const nota = new Nota(titulo,descripcion);
+  nota.Titulo=titulo;
+  nota.Descripcion=descripcion;
+  event.preventDefault();
+  // const notas = new ListadeNotas();
+  // notas.agregarNota(nota);
+  // console.log(nota);
+  //div.innerHTML=nota;
+  div.innerHTML = "NOTA" + "<br>" + "<p>" + "TITULO: " + nota.Titulo + "<br>" + "DESCRIPCION: " + nota.Descripcion;
 });
