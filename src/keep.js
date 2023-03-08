@@ -33,10 +33,22 @@ export class ListadeNotas
   {
     this.notas.push(nota);
   }
-  editarNota(titulo,desc, nota)
+  getnotas(){
+    return this.notas;
+  }
+  getnotashtml(){
+    this.concat = "";
+    for(let i = 0;i<this.notas.length;i++){
+      this.concat += "<div>" + "Titulo: " + this.notas[i]._Titulo +"</div>" + 
+      "<div>"+"Descripcion: " + this.notas[i]._Descripcion + "<button onclick = this.notas.editarNota()>" +" Editar" + "</button>" + "</div>" + "<br>";
+    }
+    return this.concat;
+  }
+  editarNota()
   {
-    nota.Titulo=titulo;
-    nota.Descripcion=desc;
+    fila = $(this).closest("tr");
+    id = $parseInt(fila.find('td:eg(0)'),text());
+    alert(id);
   }
   EliminarNota(nota)
   {
